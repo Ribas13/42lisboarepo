@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 10:00:53 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/09 11:34:12 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:35:22 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,10 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
+/*
+int	main(void)
+{
+	ft_putchar('A');
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:49:17 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/09 16:50:15 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:33:56 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,14 @@ void	ft_print_alphabet(void)
 	ap = 'a';
 	while (ap <= 'z')
 	{
-		write (1, &c, 1);
+		write (1, &ap, 1);
 	ap++;
 	}
 }
+
+/*
+int	main(void)
+{
+	ft_print_alphabet();
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:32:38 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/13 11:55:14 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:24:38 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,10 @@ void	ft_print_comb2(void)
 	}
 }
 
+/*
 int	main(void)
 {
 	ft_print_comb2();
 	return (0);
 }
+*/

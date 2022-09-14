@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 15:25:31 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/09 15:32:43 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/09/14 10:31:13 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,10 @@ void	ft_print_reverse_alphabet(void)
 	ap--;
 	}
 }
+
+/*
+int	main(void)
+{
+	ft_print_reverse_alphabet();
+}
+*/

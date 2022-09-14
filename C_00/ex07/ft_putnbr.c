@@ -1,35 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/09 16:43:15 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/14 10:28:45 by diosanto         ###   ########.fr       */
+/*   Created: 2022/09/13 12:20:57 by diosanto          #+#    #+#             */
+/*   Updated: 2022/09/14 10:23:03 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int i)
+void	ft_putchar(char c)
 {
-	char	c;
+	write(1, &c, 1);
+}
 
-	if (i >= 0)
+void	ft_putnbr(int i)
+{
+	if (i == -2147483648)
 	{
-		c = 'P';
+		ft_putchar('-');
+		ft_putchar('2');
+		i = 147483648;
 	}
 	if (i < 0)
 	{
-		c = 'N';
+		ft_putchar('-');
+		i *= -1;
 	}
-	write(1, &c, 1);
+	if (i < 10)
+	{
+		ft_putchar(i + 48);
+		return ;
+	}
+	else
+		ft_putnbr(i / 10);
+	ft_putnbr(i % 10);
 }
 
 /*
 int	main(void)
 {
-	ft_is_negative(-5);
+	ft_putnbr(-2147483648);
 }
 */

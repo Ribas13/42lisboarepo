@@ -1,37 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 08:28:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/21 12:08:12 by diosanto         ###   ########.fr       */
+/*   Created: 2022/09/21 10:20:01 by diosanto          #+#    #+#             */
+/*   Updated: 2022/09/21 10:49:34 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	c;
 
 	i = 0;
-	if (str[i] == '\0')
+	c = 0;
+	if (to_find[c] == '\0')
 	{
-		return (1);
+		return (str);
 	}
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
+		while (str[i + c] == to_find[c] && str[i + c] != '\0')
 		{
-			i++;
+			c++;
 		}
-		else
+		if (to_find[c] == '\0')
 		{
-			return (0);
+			return (str + i);
 		}
+		i++;
+		c = 0;
 	}
-	return (1);
+	return (0);
 }
+/*
+int	main()
+{
+	char str[] = "Hello world";
+	char to_find[] = "world";
+
+	printf("Original: %s\n", str);
+	printf("Find: %s\n", to_find);
+	printf("%s", ft_strstr(str, to_find));
+}*/

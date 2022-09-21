@@ -6,12 +6,13 @@
 /*   By: diosanto <diosanto@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:09:02 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/19 12:28:02 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:14:00 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
 int	ft_strlen(char *str)
 {
@@ -43,11 +44,13 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (x);
 }
-/*
-int	main()
-{
-	char src[] = "Hello,";
-	char dest[] = ", colega!";
 
-	printf("%d | %s", ft_strlcpy(dest, src, 2), dest);
-}*/
+int	main(void)
+{
+	char    src[] = "123";
+    char    dest[50] = "12938123";
+
+	printf("%d\n", ft_strlcpy(dest, src, sizeof(dest)));
+	printf("%lu", strlcpy(dest, src, sizeof(dest)));
+	return (0);
+}

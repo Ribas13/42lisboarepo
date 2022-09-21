@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 08:28:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/21 12:08:12 by diosanto         ###   ########.fr       */
+/*   Created: 2022/09/21 10:00:04 by diosanto          #+#    #+#             */
+/*   Updated: 2022/09/21 10:05:15 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	if (str[i] == '\0')
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		return (1);
-	}
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
+		if (s1[i] > s2[i])
 		{
-			i++;
+			return (1);
 		}
-		else
+		else if (s1[i] < s2[i])
 		{
-			return (0);
+			return (-1);
 		}
+		i++;
 	}
-	return (1);
+	return (0);
 }
+/*
+int	main()
+{
+	printf("%d", ft_strncmp("Hello", "Hello", 8));
+}*/

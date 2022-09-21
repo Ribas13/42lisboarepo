@@ -6,7 +6,7 @@
 /*   By: diosanto <diosanto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:20:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/14 10:23:03 by diosanto         ###   ########.fr       */
+/*   Updated: 2022/09/19 16:21:37 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ void	ft_putnbr(int i)
 	ft_putnbr(i % 10);
 }
 
-/*
 int	main(void)
 {
-	ft_putnbr(-2147483648);
+	ft_putnbr(-420);
 }
-*/

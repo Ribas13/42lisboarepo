@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 08:28:57 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/21 12:08:12 by diosanto         ###   ########.fr       */
+/*   Created: 2022/09/21 10:06:32 by diosanto          #+#    #+#             */
+/*   Updated: 2022/09/21 10:13:22 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	i2;
 
 	i = 0;
-	if (str[i] == '\0')
+	i2 = 0;
+	while (dest[i] != '\0')
 	{
-		return (1);
+		i++;
 	}
-	while (str[i] != '\0')
+	while (src[i2] != '\0')
 	{
-		if ((str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
-		{
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
+		dest[i] = src[i2];
+		i++;
+		i2++;
 	}
-	return (1);
+	dest[i] = '\0';
+	return (dest);
 }
+/*
+int	main()
+{
+	char dest[] = "Nico";
+	char src[] = " Penico";
+
+	printf("Original: %s\n", dest);
+	printf("to add: %s\n", src);
+	ft_strcat(dest, src);
+	printf("After changes: %s", dest);
+}*/

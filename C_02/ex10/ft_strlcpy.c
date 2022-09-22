@@ -44,7 +44,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (x);
 }
-
+/*
 int	main(void)
 {
 	char    src[] = "123";
@@ -53,4 +53,4 @@ int	main(void)
 	printf("%d\n", ft_strlcpy(dest, src, sizeof(dest)));
 	printf("%lu", strlcpy(dest, src, sizeof(dest)));
 	return (0);
-}
+}*/

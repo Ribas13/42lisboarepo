@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: diosanto <diosanto@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 14:30:16 by diosanto          #+#    #+#             */
-/*   Updated: 2022/09/19 15:27:07 by diosanto         ###   ########.fr       */
+/*   Created: 2022/09/21 15:19:44 by diosanto          #+#    #+#             */
+/*   Updated: 2022/09/21 15:19:45 by diosanto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putchar(char c)
 {
-	int	i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (src[i] != '\0')
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		dest[i] = src[i];
-		i++;
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb *= -1;
+	}
+	if (nb < 10)
+	{
+		ft_putchar(48 + nb);
+		return ;
+	}
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }
 /*
 int	main(void)
 {
-	char	dest[1];
-	char	*src = "Hello";
-	
-	ft_strcpy (dest, src);
-	printf ("%s\n", dest);
-	return (0);
+	ft_putnbr(-42);
 }*/

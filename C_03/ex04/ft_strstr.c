@@ -15,8 +15,8 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned int	i;
-	unsigned int	c;
+	int	i;
+	int	c;
 
 	i = 0;
 	c = 0;

@@ -16,28 +16,23 @@
 int	ft_is_prime(int nb)
 {
 	int	i;
-	int	divcount;
 
-	i = nb;
-	divcount = 0;
-	if (nb <= 1)
+	i = 2;
+	if (nb < 2)
 	{
 		return (0);
 	}
-	while (i >= 1)
+	while (i <= nb / i)
 	{
 		if (nb % i == 0)
 		{
-			divcount++;
+			return (0);
 		}
-		i--;
+		i++;
 	}
-	if (divcount > 2)
-		return (0);
-	else
-		return (1);
+	return (1);
 }
-
+/*
 int	main(void)
 {
 	printf("%d -> %d\n", -3965, ft_is_prime(-3965));
@@ -64,4 +59,4 @@ int	main(void)
 	printf("%d -> %d\n", 7853, ft_is_prime(7853));
 	printf("%d -> %d\n", 78989, ft_is_prime(78989));
 	printf("%d -> %d\n", 2147483647, ft_is_prime(2147483647));
-}
+}*/

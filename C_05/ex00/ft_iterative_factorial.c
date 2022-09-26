@@ -29,11 +29,11 @@ int	ft_iterative_factorial(int nb)
 	}
 	return (result);
 }
-
+/*
 int	main(void)
 {
 	int	nb;
 
 	nb = 3;
 	printf("%d", ft_iterative_factorial(nb));
-}
+}*/

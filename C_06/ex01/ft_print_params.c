@@ -12,11 +12,6 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int	main(int argc, char **argv)
 {
 	int	i;
@@ -28,10 +23,10 @@ int	main(int argc, char **argv)
 		i = 0;
 		while (argv[c][i] != '\0')
 		{
-			ft_putchar(argv[c][i]);
+			write(1, &argv[c][i], 1);
 			i++;
 		}
-		ft_putchar('\n');
+		write(1, "\n", 1);
 		c++;
 	}
 }
